@@ -6,15 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/2 | 你的BUG,我写的博客</title>
+  <title>阿里云ECS服务器搭建--三、FTP服务器搭建-vsftp部署（1） | 你的BUG,我写的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="你的BUG,我写的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2020/02/index.html">
+  <meta name="description" content="阿里云ECS服务器搭建–三、FTP服务器搭建-vsftp部署（1）1.查看vsftp是否部署过，依旧用Linux的RPM命令。 rpm -qa vsftp   若结果为空，说明该系统未安装过vftpd 。 2.安装vsftp yum install -y vsftpd \3. 访问配置 3.1 修改配置文件 用rpm -qc 查看 配置文件 rpm -qc vsftpd  其中: &#x2F;etc&#x2F;log">
+<meta property="og:type" content="article">
+<meta property="og:title" content="阿里云ECS服务器搭建--三、FTP服务器搭建-vsftp部署（1）">
+<meta property="og:url" content="http://yoursite.com/2020/02/18/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/index.html">
 <meta property="og:site_name" content="你的BUG,我写的博客">
+<meta property="og:description" content="阿里云ECS服务器搭建–三、FTP服务器搭建-vsftp部署（1）1.查看vsftp是否部署过，依旧用Linux的RPM命令。 rpm -qa vsftp   若结果为空，说明该系统未安装过vftpd 。 2.安装vsftp yum install -y vsftpd \3. 访问配置 3.1 修改配置文件 用rpm -qc 查看 配置文件 rpm -qc vsftpd  其中: &#x2F;etc&#x2F;log">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:%5CUsers%5Cjitahui%5CAppData%5CLocal%5CYNote%5Cdata%5Cqq69094192A25F9E585147980175634CB1%5C26d1a01dfa3a4d5baa4ec13b4641d089%5Cclipboard.png">
+<meta property="og:image" content="c:%5CUsers%5Cjitahui%5CAppData%5CLocal%5CYNote%5Cdata%5Cqq69094192A25F9E585147980175634CB1%5C9eb4366ae3fd45fa9cee00463d7fb8f2%5Cclipboard.png">
+<meta property="og:image" content="c:%5CUsers%5Cjitahui%5CAppData%5CLocal%5CYNote%5Cdata%5Cqq69094192A25F9E585147980175634CB1%5C51c649761bcd4be598f6884b82200d6d%5Cclipboard.png">
+<meta property="og:image" content="c:%5CUsers%5Cjitahui%5CAppData%5CLocal%5CYNote%5Cdata%5Cqq69094192A25F9E585147980175634CB1%5C31066d7dfc264a5995c71293d548fed9%5Cclipboard.png">
+<meta property="og:image" content="c:%5CUsers%5Cjitahui%5CAppData%5CLocal%5CYNote%5Cdata%5Cqq69094192A25F9E585147980175634CB1%5Ce573966220ae487590d9d1d63e871335%5Cclipboard.png">
+<meta property="article:published_time" content="2020-02-18T10:13:33.175Z">
+<meta property="article:modified_time" content="2020-02-18T10:13:33.175Z">
 <meta property="article:author" content="你的BUG,我写的">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:%5CUsers%5Cjitahui%5CAppData%5CLocal%5CYNote%5Cdata%5Cqq69094192A25F9E585147980175634CB1%5C26d1a01dfa3a4d5baa4ec13b4641d089%5Cclipboard.png">
   
     <link rel="alternative" href="/atom.xml" title="你的BUG,我写的博客" type="application/atom+xml">
   
@@ -150,103 +160,188 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-阿里云ECS服务器搭建--三、FTP服务器搭建-vsftp部署（1）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      阿里云ECS服务器搭建--三、FTP服务器搭建-vsftp部署（1）
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/18/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/" class="archive-article-date">
+
+        
+        <a href="/2020/02/18/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/" class="archive-article-date">
   	<time datetime="2020-02-18T10:13:33.175Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-18</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/18/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/">阿里云ECS服务器搭建--三、FTP服务器搭建-vsftp部署（1）</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="阿里云ECS服务器搭建–三、FTP服务器搭建-vsftp部署（1）"><a href="#阿里云ECS服务器搭建–三、FTP服务器搭建-vsftp部署（1）" class="headerlink" title="阿里云ECS服务器搭建–三、FTP服务器搭建-vsftp部署（1）"></a>阿里云ECS服务器搭建–三、FTP服务器搭建-vsftp部署（1）</h1><p>1.查看vsftp是否部署过，依旧用Linux的RPM命令。</p>
+<p>rpm -qa vsftp</p>
+<p><img src="C:%5CUsers%5Cjitahui%5CAppData%5CLocal%5CYNote%5Cdata%5Cqq69094192A25F9E585147980175634CB1%5C26d1a01dfa3a4d5baa4ec13b4641d089%5Cclipboard.png" alt="img"></p>
+<p> 若结果为空，说明该系统未安装过vftpd 。</p>
+<p>2.安装vsftp</p>
+<p>yum install -y vsftpd</p>
+<p>\3. 访问配置</p>
+<p>3.1 修改配置文件</p>
+<p>用rpm -qc 查看 配置文件</p>
+<p>rpm -qc vsftpd</p>
+<p><img src="C:%5CUsers%5Cjitahui%5CAppData%5CLocal%5CYNote%5Cdata%5Cqq69094192A25F9E585147980175634CB1%5C9eb4366ae3fd45fa9cee00463d7fb8f2%5Cclipboard.png" alt="img"></p>
+<p>其中:</p>
+<p>/etc/logrotate.d/vsftpd                 滚动日志配置文件</p>
+<p>/etc/pam.d/vsftpd          认证文件，pam全称为Plugable Authentication</p>
+<p>/etc/vsftpd/ftpusers        控制登陆系统用户的机制，出现在该文件中的用户不允许使用ftp服务器，这是在/etc/pam.d/vsftpd中定义的</p>
+<p>/etc/vsftpd/user_list        配合/etc/vsftpd/vsftpd.conf中的userlist_enable=YES和userlist_deny=YES|NO实现黑白名单此处需要注意的是：黑白名单的前提是/etc/vsftpd/vsftpd.conf配置文件中userlist_enable=YES，userlist_deny选项默认为YES（黑名单），即该文件中出现的用户不允许登陆VSFTP，就算手动添加userlist_deny=NO（白名单）即只允许该文件中出现的用户允许登陆VSFTP，在VSFTP启动时依然会去检查/etc/vsftpd/ftpusers文件并且禁止该文件中的用户登录</p>
+<p>/etc/vsftpd/vsftpd.conf       VSFTP主配置文件，所有的配置选项必须顶格写，配置文件中#后带空格的是说明，不带空格的是注释掉的配置选项</p>
+<p>为了防止初始文件被破坏，和还原。先用CP命令备份。然后修改vsftpd.conf配置文件。</p>
+<p>vim vsftpd.conf</p>
+<p>配置VSFTPD 配置文件</p>
+<p>3.1 重启vftpd服务</p>
+<p>centOS7</p>
+<p>systemctl restart vsftpd.service </p>
+<p>不管有没有报错</p>
+<p>systemctl status vsftpd.service </p>
+<p><img src="C:%5CUsers%5Cjitahui%5CAppData%5CLocal%5CYNote%5Cdata%5Cqq69094192A25F9E585147980175634CB1%5C51c649761bcd4be598f6884b82200d6d%5Cclipboard.png" alt="img"></p>
+<p>如果是ACTIVE(running)则是重启成功，查看进程和端口</p>
+<p><img src="C:%5CUsers%5Cjitahui%5CAppData%5CLocal%5CYNote%5Cdata%5Cqq69094192A25F9E585147980175634CB1%5C31066d7dfc264a5995c71293d548fed9%5Cclipboard.png" alt="img"></p>
+<p>然后测试下 </p>
+<p><img src="C:%5CUsers%5Cjitahui%5CAppData%5CLocal%5CYNote%5Cdata%5Cqq69094192A25F9E585147980175634CB1%5Ce573966220ae487590d9d1d63e871335%5Cclipboard.png" alt="img"></p>
+<p>进入FTP 后输入用户密码（非匿名用户），然后ls如果能够显示用户目录 ，则说明可以了。</p>
+<p>注意，ECS默认的时候 未必开通21 20  以及高位端口（），必要时需要在用户组规则上添加。</p>
+<p>访问有虚拟用户登录和匿名用户登录，后续细讲。</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/18/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/18/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-02-18T10:02:24.416Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-18</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/02/18/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/18/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/">我的博客</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/17/hello-world/" class="archive-article-date">
-  	<time datetime="2020-02-17T16:09:37.773Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/17/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -269,8 +364,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
