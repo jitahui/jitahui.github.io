@@ -20,8 +20,8 @@
 <meta property="og:image" content="http://yoursite.com/2020/02/18/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/3.png">
 <meta property="og:image" content="http://yoursite.com/2020/02/18/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/4.png">
 <meta property="og:image" content="http://yoursite.com/2020/02/18/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/5.png">
-<meta property="article:published_time" content="2020-02-18T14:20:08.974Z">
-<meta property="article:modified_time" content="2020-02-18T14:20:08.973Z">
+<meta property="article:published_time" content="2020-02-18T14:22:20.775Z">
+<meta property="article:modified_time" content="2020-02-18T14:22:20.775Z">
 <meta property="article:author" content="你的BUG,我写的">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/2020/02/18/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/1.png">
@@ -173,7 +173,7 @@
 
         
         <a href="/2020/02/18/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-02-18T14:20:08.974Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-18</time>
+  	<time datetime="2020-02-18T14:22:20.775Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-18</time>
 </a>
         
       </header>
@@ -182,7 +182,7 @@
       
         <h1 id="阿里云ECS服务器搭建–三、FTP服务器搭建-vsftp部署（1）"><a href="#阿里云ECS服务器搭建–三、FTP服务器搭建-vsftp部署（1）" class="headerlink" title="阿里云ECS服务器搭建–三、FTP服务器搭建-vsftp部署（1）"></a>阿里云ECS服务器搭建–三、FTP服务器搭建-vsftp部署（1）</h1><p>1.查看vsftp是否部署过，依旧用Linux的RPM命令。</p>
 <p>rpm -qa vsftp</p>
-<p><img src="1.png" alt="img"></p>
+<p><img src="/2020/02/18/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/1.png" alt="img"></p>
 <p> 若结果为空，说明该系统未安装过vftpd 。</p>
 <p>2.安装vsftp</p>
 <p>yum install -y vsftpd</p>
@@ -190,7 +190,7 @@
 <p>3.1 修改配置文件</p>
 <p>用rpm -qc 查看 配置文件</p>
 <p>rpm -qc vsftpd</p>
-<p><img src="2.png" alt="img"></p>
+<p><img src="/2020/02/18/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/2.png" alt="img"></p>
 <p>其中:</p>
 <p>/etc/logrotate.d/vsftpd                 滚动日志配置文件</p>
 <p>/etc/pam.d/vsftpd          认证文件，pam全称为Plugable Authentication</p>
@@ -205,11 +205,11 @@
 <p>systemctl restart vsftpd.service </p>
 <p>不管有没有报错</p>
 <p>systemctl status vsftpd.service </p>
-<p><img src="3.png" alt="img"></p>
+<p><img src="/2020/02/18/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/3.png" alt="img"></p>
 <p>如果是ACTIVE(running)则是重启成功，查看进程和端口</p>
-<p><img src="4.png" alt="img"></p>
+<p><img src="/2020/02/18/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/4.png" alt="img"></p>
 <p>然后测试下 </p>
-<p><img src="5.png" alt="img"></p>
+<p><img src="/2020/02/18/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/5.png" alt="img"></p>
 <p>进入FTP 后输入用户密码（非匿名用户），然后ls如果能够显示用户目录 ，则说明可以了。</p>
 <p>注意，ECS默认的时候 未必开通21 20  以及高位端口（），必要时需要在用户组规则上添加。</p>
 <p>访问有虚拟用户登录和匿名用户登录，后续细讲。</p>
