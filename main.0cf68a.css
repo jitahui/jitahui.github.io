@@ -686,8 +686,8 @@ body {
 	background:hsla(0,0%,100%,.3)
 }
 .left-col {
-/*	background:#fff;  */
-url('./img/left-col.png') no-repeat 0% 20%/ cover;
+	background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+url(./img/left-col.png) no-repeat 0% 20%/ cover;
 
 	width:300px;
 	position:fixed;
