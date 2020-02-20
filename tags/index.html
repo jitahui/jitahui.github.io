@@ -6,25 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>阿里云ECS服务器搭建--三、FTP服务器搭建-vsftp部署（1） | 你的BUG,我写的博客</title>
+  <title>tags | 你的BUG,我写的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="通过FTP方式作为文件服务器管理传输文件在，中小企业还是运用的比较多。因此记录一下本文章，以便以后翻阅。 本文主要讲的是FTP环境的基本搭建中VSFTP的安装以及环境配置等。具体的各种访问方式，以及权限等在以后的文章中细讲。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="阿里云ECS服务器搭建--三、FTP服务器搭建-vsftp部署（1）">
-<meta property="og:url" content="http://yoursite.com/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="tags">
+<meta property="og:url" content="http://yoursite.com/tags/index.html">
 <meta property="og:site_name" content="你的BUG,我写的博客">
-<meta property="og:description" content="通过FTP方式作为文件服务器管理传输文件在，中小企业还是运用的比较多。因此记录一下本文章，以便以后翻阅。 本文主要讲的是FTP环境的基本搭建中VSFTP的安装以及环境配置等。具体的各种访问方式，以及权限等在以后的文章中细讲。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/1.png">
-<meta property="og:image" content="http://yoursite.com/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/2.png">
-<meta property="og:image" content="http://yoursite.com/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/3.png">
-<meta property="og:image" content="http://yoursite.com/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/4.png">
-<meta property="og:image" content="http://yoursite.com/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/5.png">
-<meta property="article:published_time" content="2020-02-19T14:02:00.929Z">
-<meta property="article:modified_time" content="2020-02-19T14:02:00.928Z">
+<meta property="article:published_time" content="2020-02-20T09:58:43.000Z">
+<meta property="article:modified_time" content="2020-02-20T09:58:43.871Z">
 <meta property="article:author" content="你的BUG,我写的">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/1.png">
   
     <link rel="alternative" href="/atom.xml" title="你的BUG,我写的博客" type="application/atom+xml">
   
@@ -178,20 +170,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-阿里云ECS服务器搭建--三、FTP服务器搭建-vsftp部署（1）" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      阿里云ECS服务器搭建--三、FTP服务器搭建-vsftp部署（1）
+      tags
     </h1>
   
 
         
-        <a href="/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-02-19T14:02:00.929Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-19</time>
+        <a href="/tags/index.html" class="archive-article-date">
+  	<time datetime="2020-02-20T09:58:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-20</time>
 </a>
         
       </header>
@@ -200,42 +192,7 @@
    
 
 	
-		<p> 通过FTP方式作为文件服务器管理传输文件在，中小企业还是运用的比较多。因此记录一下本文章，以便以后翻阅。<br> 本文主要讲的是FTP环境的基本搭建中VSFTP的安装以及环境配置等。具体的各种访问方式，以及权限等在以后的文章中细讲。</p>
-<a id="more"></a>
-<p>1.查看vsftp是否部署过，依旧用Linux的RPM命令。</p>
-<p>rpm -qa vsftp</p>
-<p><img src="/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/1.png" alt></p>
-<p> 若结果为空，说明该系统未安装过vftpd 。</p>
-<p>2.安装vsftp</p>
-<p>yum install -y vsftpd</p>
-<p>\3. 访问配置</p>
-<p>3.1 修改配置文件</p>
-<p>用rpm -qc 查看 配置文件</p>
-<p>rpm -qc vsftpd</p>
-<p><img src="/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/2.png" alt></p>
-<p>其中:</p>
-<p>/etc/logrotate.d/vsftpd                 滚动日志配置文件</p>
-<p>/etc/pam.d/vsftpd          认证文件，pam全称为Plugable Authentication</p>
-<p>/etc/vsftpd/ftpusers        控制登陆系统用户的机制，出现在该文件中的用户不允许使用ftp服务器，这是在/etc/pam.d/vsftpd中定义的</p>
-<p>/etc/vsftpd/user_list        配合/etc/vsftpd/vsftpd.conf中的userlist_enable=YES和userlist_deny=YES|NO实现黑白名单此处需要注意的是：黑白名单的前提是/etc/vsftpd/vsftpd.conf配置文件中userlist_enable=YES，userlist_deny选项默认为YES（黑名单），即该文件中出现的用户不允许登陆VSFTP，就算手动添加userlist_deny=NO（白名单）即只允许该文件中出现的用户允许登陆VSFTP，在VSFTP启动时依然会去检查/etc/vsftpd/ftpusers文件并且禁止该文件中的用户登录</p>
-<p>/etc/vsftpd/vsftpd.conf       VSFTP主配置文件，所有的配置选项必须顶格写，配置文件中#后带空格的是说明，不带空格的是注释掉的配置选项</p>
-<p>为了防止初始文件被破坏，和还原。先用CP命令备份。然后修改vsftpd.conf配置文件。</p>
-<p>vim vsftpd.conf</p>
-<p>配置VSFTPD 配置文件</p>
-<p>3.1 重启vftpd服务</p>
-<p>centOS7</p>
-<p>systemctl restart vsftpd.service </p>
-<p>不管有没有报错</p>
-<p>systemctl status vsftpd.service </p>
-<p><img src="/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/3.png" alt></p>
-<p>如果是ACTIVE(running)则是重启成功，查看进程和端口</p>
-<p><img src="/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/4.png" alt></p>
-<p>然后测试下 </p>
-<p><img src="/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/5.png" alt></p>
-<p>进入FTP 后输入用户密码（非匿名用户），然后ls如果能够显示用户目录 ，则说明可以了。</p>
-<p>注意，ECS默认的时候 未必开通21 20  以及高位端口（），必要时需要在用户组规则上添加。</p>
-<p>访问有虚拟用户登录和匿名用户登录，后续细讲。</p>
-
+		
 	
 
     </div>     
@@ -291,7 +248,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/tags/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -303,16 +260,6 @@
 </article>
 
   
-<nav id="article-nav">
-  
-  
-    <a href="/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">阿里云ECS服务器搭建---  二、  通过xshell远程登录阿里ECS云服务</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -410,7 +357,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
