@@ -687,7 +687,7 @@ body {
 }
 .left-col {
 /*	background:#fff;  */
-url('left-col.jpeg') no-repeat 0% 20%/ cover;
+url('./img/left-col.png') no-repeat 0% 20%/ cover;
 
 	width:300px;
 	position:fixed;
