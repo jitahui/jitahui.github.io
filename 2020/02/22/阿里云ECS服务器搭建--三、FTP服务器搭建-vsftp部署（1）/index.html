@@ -6,15 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Category: 工具 | 你的BUG,我写的博客</title>
+  <title>阿里云ECS服务器搭建--三、FTP服务器搭建-vsftp部署（1） | 你的BUG,我写的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="你的BUG,我写的博客">
-<meta property="og:url" content="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/index.html">
+  <meta name="description" content="本文主要讲的是FTP环境的基本搭建中VSFTP的安装以及环境配置等。具体的各种访问方式，以及权限等在以后的文章中细讲。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="阿里云ECS服务器搭建--三、FTP服务器搭建-vsftp部署（1）">
+<meta property="og:url" content="http://yoursite.com/2020/02/22/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/index.html">
 <meta property="og:site_name" content="你的BUG,我写的博客">
+<meta property="og:description" content="本文主要讲的是FTP环境的基本搭建中VSFTP的安装以及环境配置等。具体的各种访问方式，以及权限等在以后的文章中细讲。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/2020/02/22/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/1.png">
+<meta property="og:image" content="http://yoursite.com/2020/02/22/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/2.png">
+<meta property="og:image" content="http://yoursite.com/2020/02/22/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/3.png">
+<meta property="og:image" content="http://yoursite.com/2020/02/22/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/4.png">
+<meta property="og:image" content="http://yoursite.com/2020/02/22/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/5.png">
+<meta property="article:published_time" content="2020-02-22T17:08:46.432Z">
+<meta property="article:modified_time" content="2020-02-22T17:08:46.430Z">
 <meta property="article:author" content="你的BUG,我写的">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/02/22/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/1.png">
   
     <link rel="alternative" href="/atom.xml" title="你的BUG,我写的博客" type="application/atom+xml">
   
@@ -168,60 +178,230 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-阿里云ECS服务器搭建--三、FTP服务器搭建-vsftp部署（1）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/21/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-02-21T09:01:44.155Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-21</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/21/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/">阿里云ECS服务器搭建--三、FTP服务器搭建-vsftp部署（1）</a>
+    <h1 class="article-title" itemprop="name">
+      阿里云ECS服务器搭建--三、FTP服务器搭建-vsftp部署（1）
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2020/02/22/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2020-02-22T17:08:46.432Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+ 
+
+	
+		<p> 本文主要讲的是FTP环境的基本搭建中VSFTP的安装以及环境配置等。具体的各种访问方式，以及权限等在以后的文章中细讲。</p>
+<a id="more"></a>
+<p>1.查看vsftp是否部署过，依旧用Linux的RPM命令。</p>
+<p>rpm -qa vsftp</p>
+<p><img src="/2020/02/22/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/1.png" alt></p>
+<p> 若结果为空，说明该系统未安装过vftpd 。</p>
+<p>2.安装vsftp</p>
+<p>yum install -y vsftpd</p>
+<p>\3. 访问配置</p>
+<p>3.1 修改配置文件</p>
+<p>用rpm -qc 查看 配置文件</p>
+<p>rpm -qc vsftpd</p>
+<p><img src="/2020/02/22/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/2.png" alt></p>
+<p>其中:</p>
+<p>/etc/logrotate.d/vsftpd                 滚动日志配置文件</p>
+<p>/etc/pam.d/vsftpd          认证文件，pam全称为Plugable Authentication</p>
+<p>/etc/vsftpd/ftpusers        控制登陆系统用户的机制，出现在该文件中的用户不允许使用ftp服务器，这是在/etc/pam.d/vsftpd中定义的</p>
+<p>/etc/vsftpd/user_list        配合/etc/vsftpd/vsftpd.conf中的userlist_enable=YES和userlist_deny=YES|NO实现黑白名单此处需要注意的是：黑白名单的前提是/etc/vsftpd/vsftpd.conf配置文件中userlist_enable=YES，userlist_deny选项默认为YES（黑名单），即该文件中出现的用户不允许登陆VSFTP，就算手动添加userlist_deny=NO（白名单）即只允许该文件中出现的用户允许登陆VSFTP，在VSFTP启动时依然会去检查/etc/vsftpd/ftpusers文件并且禁止该文件中的用户登录</p>
+<p>/etc/vsftpd/vsftpd.conf       VSFTP主配置文件，所有的配置选项必须顶格写，配置文件中#后带空格的是说明，不带空格的是注释掉的配置选项</p>
+<p>为了防止初始文件被破坏，和还原。先用CP命令备份。然后修改vsftpd.conf配置文件。</p>
+<p>vim vsftpd.conf</p>
+<p>配置VSFTPD 配置文件</p>
+<p>3.1 重启vftpd服务</p>
+<p>centOS7</p>
+<p>systemctl restart vsftpd.service </p>
+<p>不管有没有报错</p>
+<p>systemctl status vsftpd.service </p>
+<p><img src="/2020/02/22/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/3.png" alt></p>
+<p>如果是ACTIVE(running)则是重启成功，查看进程和端口</p>
+<p><img src="/2020/02/22/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/4.png" alt></p>
+<p>然后测试下 </p>
+<p><img src="/2020/02/22/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/5.png" alt></p>
+<p>进入FTP 后输入用户密码（非匿名用户），然后ls如果能够显示用户目录 ，则说明可以了。</p>
+<p>注意，ECS默认的时候 未必开通21 20  以及高位端口（），必要时需要在用户组规则上添加。</p>
+<p>访问有虚拟用户登录和匿名用户登录，后续细讲。</p>
+
+	
+
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/工具//" class="article-tag-list-link color3">工具</a>
+        			<a href="/categories/linux//" class="article-tag-list-link color1">linux</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/22/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">阿里云ECS服务器搭建---  二、  通过xshell远程登录阿里ECS云服务</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
+
+
+
+        
+            
+   <section id="comments" class="comments">
+              <style>
+                .comments{margin:30px;padding:10px;background:#fff}
+                @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+              </style>
+              <div class="valine_comment"></div>
+<!--载入js，在</body>之前插入即可-->
+<!--Leancloud 操作库:-->
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<!--Valine 的核心代码库-->
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  var notify = 'true' == true ? true : false;
+  var verify = 'false' == true ? true : false;
+  new Valine({
+      // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+      av: AV,
+      el: '.valine_comment',
+      emoticon_url: 'https://cloud.panjunwen.com/alu',
+      emoticon_list: ["狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","暗地观察.png"],
+      app_id: 'Py8SMQaqQ9rgkFbTeuaEimiI-gzGzoHsz',
+      app_key: 'JVQnlhwYrhtN3V9WCQTP3IEF',
+      placeholder: '有话要说？'
+    });
+</script>
+
+
+          </section>
+        
+
+        
 
 
           </div>
@@ -246,10 +426,10 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
