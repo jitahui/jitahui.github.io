@@ -6,15 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 你的BUG,我写的博客</title>
+  <title>泛型在ABAP中的运用 | 你的BUG,我写的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="你的BUG,我写的博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="一、概念ABAP中的泛型编程用于支持不依赖具体的数据类型的操作，也就是通用的操作。 ABAP中的泛型采用了预定义的通用类型（Generic Type）与字段符号相配合来实现。 SAP通过类的反射机制来演示泛型在类对象中的应用。 类对象的反射机制可以让我们在程序的运行期（Runtime）获得一个类的具体细节，如类的状态、变量名臣和值、方法名称和参数等信息。还可以让我么在运行期实例化对象，通过调用GE">
+<meta property="og:type" content="article">
+<meta property="og:title" content="泛型在ABAP中的运用">
+<meta property="og:url" content="http://yoursite.com/2020/02/22/%E6%B3%9B%E5%9E%8B%E5%9C%A8ABAP%E4%B8%AD%E7%9A%84%E8%BF%90%E7%94%A8/index.html">
 <meta property="og:site_name" content="你的BUG,我写的博客">
+<meta property="og:description" content="一、概念ABAP中的泛型编程用于支持不依赖具体的数据类型的操作，也就是通用的操作。 ABAP中的泛型采用了预定义的通用类型（Generic Type）与字段符号相配合来实现。 SAP通过类的反射机制来演示泛型在类对象中的应用。 类对象的反射机制可以让我们在程序的运行期（Runtime）获得一个类的具体细节，如类的状态、变量名臣和值、方法名称和参数等信息。还可以让我么在运行期实例化对象，通过调用GE">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/2020/02/22/%E6%B3%9B%E5%9E%8B%E5%9C%A8ABAP%E4%B8%AD%E7%9A%84%E8%BF%90%E7%94%A8/CLASS.png">
+<meta property="article:published_time" content="2020-02-22T17:18:34.032Z">
+<meta property="article:modified_time" content="2020-02-22T17:18:34.031Z">
 <meta property="article:author" content="你的BUG,我写的">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/02/22/%E6%B3%9B%E5%9E%8B%E5%9C%A8ABAP%E4%B8%AD%E7%9A%84%E8%BF%90%E7%94%A8/CLASS.png">
   
     <link rel="alternative" href="/atom.xml" title="你的BUG,我写的博客" type="application/atom+xml">
   
@@ -168,37 +174,71 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-泛型在ABAP中的运用" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/22/%E6%B3%9B%E5%9E%8B%E5%9C%A8ABAP%E4%B8%AD%E7%9A%84%E8%BF%90%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2020-02-22T17:18:34.032Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-22</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/22/%E6%B3%9B%E5%9E%8B%E5%9C%A8ABAP%E4%B8%AD%E7%9A%84%E8%BF%90%E7%94%A8/">泛型在ABAP中的运用</a>
+    <h1 class="article-title" itemprop="name">
+      泛型在ABAP中的运用
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2020/02/22/%E6%B3%9B%E5%9E%8B%E5%9C%A8ABAP%E4%B8%AD%E7%9A%84%E8%BF%90%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2020-02-22T17:18:34.032Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+ 
+
+	
+		<h1 id="一、概念"><a href="#一、概念" class="headerlink" title="一、概念"></a>一、概念</h1><p>ABAP中的泛型编程用于支持不依赖具体的数据类型的操作，也就是通用的操作。</p>
+<p>ABAP中的泛型采用了预定义的通用类型（Generic Type）与字段符号相配合来实现。</p>
+<p>SAP通过类的反射机制来演示泛型在类对象中的应用。</p>
+<p>类对象的反射机制可以让我们在程序的运行期（Runtime）获得一个类的具体细节，如类的状态、变量名臣和值、方法名称和参数等信息。还可以让我么在运行期实例化对象，通过调用GET/SET方法获取变量的值。</p>
+<a id="more"></a>
+<p>ABAP中预定义的通用类型</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ANY</td>
+<td>任何类型</td>
+</tr>
+<tr>
+<td>ANY TABLE</td>
+<td>内表，可以存储任何类型</td>
+</tr>
+<tr>
+<td>OBJECT</td>
+<td>任何对象类型</td>
+</tr>
+</tbody></table>
+<p>ABAP类对象的泛型</p>
+<p>首先说下几个相关的类</p>
+<p><img src="/2020/02/22/%E6%B3%9B%E5%9E%8B%E5%9C%A8ABAP%E4%B8%AD%E7%9A%84%E8%BF%90%E7%94%A8/CLASS.png" alt></p>
+<p>其中超类CL_ABAP_TYOEDESCR包含了4个方法，它的子类都继承了该方法</p>
+<p><strong>DESCRIBE_BY_NAME</strong>: 根据入参的类型名返回对应对象的描述。</p>
+<p><strong>DESCRIBE_BY_DATA</strong>:  根据入参的类型名返回对应对象的类型。</p>
+<p><strong>DESCRIBE_BY_DATA_REF</strong>: </p>
+<p><strong>DESCRIBE_BY_OBJECT_REF</strong>: </p>
+<p>可以调用SAP 标准类CL_ABAP_CLASSDESCR方法获取类的属性和方法，并配合使用泛型来操作类对象反射。</p>
+<h1 id="二、泛型的运用"><a href="#二、泛型的运用" class="headerlink" title="二、泛型的运用"></a>二、泛型的运用</h1><h2 id="1-动态内表做行列转换"><a href="#1-动态内表做行列转换" class="headerlink" title="1.动态内表做行列转换"></a>1.动态内表做行列转换</h2><h2 id="2-在实参形参中用"><a href="#2-在实参形参中用" class="headerlink" title="2.在实参形参中用"></a>2.在实参形参中用</h2><h2 id="3-在多态思维中广泛运用。"><a href="#3-在多态思维中广泛运用。" class="headerlink" title="3.在多态思维中广泛运用。"></a>3.在多态思维中广泛运用。</h2>
+	
+
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -211,82 +251,153 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/22/%E6%B3%9B%E5%9E%8B%E5%9C%A8ABAP%E4%B8%AD%E7%9A%84%E8%BF%90%E7%94%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/22/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-02-22T17:08:46.432Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-22</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/02/22/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">阿里云ECS服务器搭建--三、FTP服务器搭建-vsftp部署（1）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/22/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/">阿里云ECS服务器搭建--三、FTP服务器搭建-vsftp部署（1）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/linux//" class="article-tag-list-link color1">linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、概念"><span class="toc-number">1.</span> <span class="toc-text">一、概念</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、泛型的运用"><span class="toc-number">2.</span> <span class="toc-text">二、泛型的运用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-动态内表做行列转换"><span class="toc-number">2.1.</span> <span class="toc-text">1.动态内表做行列转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-在实参形参中用"><span class="toc-number">2.2.</span> <span class="toc-text">2.在实参形参中用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-在多态思维中广泛运用。"><span class="toc-number">2.3.</span> <span class="toc-text">3.在多态思维中广泛运用。</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/" class="archive-article-date">
-  	<time datetime="2020-02-19T11:41:33.865Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-19</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/">阿里云ECS服务器搭建---  二、  通过xshell远程登录阿里ECS云服务</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
+
+
+
+        
+            
+   <section id="comments" class="comments">
+              <style>
+                .comments{margin:30px;padding:10px;background:#fff}
+                @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+              </style>
+              <div class="valine_comment"></div>
+<!--载入js，在</body>之前插入即可-->
+<!--Leancloud 操作库:-->
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<!--Valine 的核心代码库-->
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  var notify = 'true' == true ? true : false;
+  var verify = 'false' == true ? true : false;
+  new Valine({
+      // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+      av: AV,
+      el: '.valine_comment',
+      emoticon_url: 'https://cloud.panjunwen.com/alu',
+      emoticon_list: ["狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","暗地观察.png"],
+      app_id: 'Py8SMQaqQ9rgkFbTeuaEimiI-gzGzoHsz',
+      app_key: 'JVQnlhwYrhtN3V9WCQTP3IEF',
+      placeholder: '有话要说？'
+    });
+</script>
+
+
+          </section>
+        
+
+        
 
 
           </div>
@@ -311,8 +422,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
