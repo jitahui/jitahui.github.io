@@ -6,21 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>ABAP/ABAP中的动态编程 | 你的BUG,我写的博客</title>
+  <title>SAP/ABAP中的动态编程 | 你的BUG,我写的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="一、概念 动态编程语言和静态编程语言    静态和动态是针对变量的数据类型。静态类型中不同的数据类型的变量在使用前需要分配内存。检查是编译期间。反之，就是动态类型语言。类型检查是在编译时完成，还是在运行时完成。或者说，运行时，是否有动态类型和动态类型信息是静态语言和动态语言的区别。  运行时类型识别（RTTI）   ​         运行时类型标识（RTTI）可在运行时获取有关数据类型的所有信息">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ABAP&#x2F;ABAP中的动态编程">
-<meta property="og:url" content="http://yoursite.com/2020/02/23/ABAP/ABAP%E4%B8%AD%E7%9A%84%E5%8A%A8%E6%80%81%E7%BC%96%E7%A8%8B/index.html">
+<meta property="og:title" content="SAP&#x2F;ABAP中的动态编程">
+<meta property="og:url" content="http://yoursite.com/2020/02/23/SAP/ABAP%E4%B8%AD%E7%9A%84%E5%8A%A8%E6%80%81%E7%BC%96%E7%A8%8B/index.html">
 <meta property="og:site_name" content="你的BUG,我写的博客">
 <meta property="og:description" content="一、概念 动态编程语言和静态编程语言    静态和动态是针对变量的数据类型。静态类型中不同的数据类型的变量在使用前需要分配内存。检查是编译期间。反之，就是动态类型语言。类型检查是在编译时完成，还是在运行时完成。或者说，运行时，是否有动态类型和动态类型信息是静态语言和动态语言的区别。  运行时类型识别（RTTI）   ​         运行时类型标识（RTTI）可在运行时获取有关数据类型的所有信息">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/2020/02/23/ABAP/ABAP%E4%B8%AD%E7%9A%84%E5%8A%A8%E6%80%81%E7%BC%96%E7%A8%8B/CLASS.png">
+<meta property="og:image" content="http://yoursite.com/2020/02/23/SAP/ABAP%E4%B8%AD%E7%9A%84%E5%8A%A8%E6%80%81%E7%BC%96%E7%A8%8B/CLASS.png">
 <meta property="article:published_time" content="2020-02-23T12:19:18.385Z">
 <meta property="article:modified_time" content="2020-02-23T12:19:18.385Z">
 <meta property="article:author" content="你的BUG,我写的">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/02/23/ABAP/ABAP%E4%B8%AD%E7%9A%84%E5%8A%A8%E6%80%81%E7%BC%96%E7%A8%8B/CLASS.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/02/23/SAP/ABAP%E4%B8%AD%E7%9A%84%E5%8A%A8%E6%80%81%E7%BC%96%E7%A8%8B/CLASS.png">
   
     <link rel="alternative" href="/atom.xml" title="你的BUG,我写的博客" type="application/atom+xml">
   
@@ -174,19 +174,19 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-ABAP/ABAP中的动态编程" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-SAP/ABAP中的动态编程" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      ABAP/ABAP中的动态编程
+      SAP/ABAP中的动态编程
     </h1>
   
 
         
-        <a href="/2020/02/23/ABAP/ABAP%E4%B8%AD%E7%9A%84%E5%8A%A8%E6%80%81%E7%BC%96%E7%A8%8B/" class="archive-article-date">
+        <a href="/2020/02/23/SAP/ABAP%E4%B8%AD%E7%9A%84%E5%8A%A8%E6%80%81%E7%BC%96%E7%A8%8B/" class="archive-article-date">
   	<time datetime="2020-02-23T12:19:18.385Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-23</time>
 </a>
         
@@ -238,7 +238,7 @@
 </tr>
 </tbody></table>
 <p>首先说下几个相关的类</p>
-<p><img src="/2020/02/23/ABAP/ABAP%E4%B8%AD%E7%9A%84%E5%8A%A8%E6%80%81%E7%BC%96%E7%A8%8B/CLASS.png" alt></p>
+<p><img src="/2020/02/23/SAP/ABAP%E4%B8%AD%E7%9A%84%E5%8A%A8%E6%80%81%E7%BC%96%E7%A8%8B/CLASS.png" alt></p>
 <p>其中超类CL_ABAP_TYOEDESCR包含了4个方法：DESCRIBE_BY_NAME、DESCRIBE_BY_DATA、DESCRIBE_BY_DATA_REF、DESCRIBE_BY_OBJECT_REF。它的子类都继承了该方法.可以调用SAP 标准类方法获取类的属性和方法，并配合使用泛型来操作类对象反射。</p>
 <p>泛型的应用在可以复用的算法，简化了原本需要通过代码实现的冗余部分，以及实现了那些只有在运行时才能确定类型或者参数类型的需求。</p>
 <ul>
@@ -338,7 +338,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/23/ABAP/ABAP%E4%B8%AD%E7%9A%84%E5%8A%A8%E6%80%81%E7%BC%96%E7%A8%8B/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/23/SAP/ABAP%E4%B8%AD%E7%9A%84%E5%8A%A8%E6%80%81%E7%BC%96%E7%A8%8B/" alt="微信分享二维码">
     </div>
 </div>
 
