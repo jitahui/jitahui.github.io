@@ -6,21 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>泛型在ABAP中的运用 | 你的BUG,我写的博客</title>
+  <title>ABAP/ABAP中的动态编程 | 你的BUG,我写的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、概念ABAP中的泛型编程用于支持不依赖具体的数据类型的操作，也就是通用的操作。 ABAP中的泛型采用了预定义的通用类型（Generic Type）与字段符号相配合来实现。 SAP通过类的反射机制来演示泛型在类对象中的应用。 类对象的反射机制可以让我们在程序的运行期（Runtime）获得一个类的具体细节，如类的状态、变量名臣和值、方法名称和参数等信息。还可以让我么在运行期实例化对象，通过调用GE">
+  <meta name="description" content="一、概念 动态编程语言和静态编程语言    静态和动态是针对变量的数据类型。静态类型中不同的数据类型的变量在使用前需要分配内存。检查是编译期间。反之，就是动态类型语言。类型检查是在编译时完成，还是在运行时完成。或者说，运行时，是否有动态类型和动态类型信息是静态语言和动态语言的区别。  运行时类型识别（RTTI）   ​         运行时类型标识（RTTI）可在运行时获取有关数据类型的所有信息">
 <meta property="og:type" content="article">
-<meta property="og:title" content="泛型在ABAP中的运用">
-<meta property="og:url" content="http://yoursite.com/2020/02/22/%E6%B3%9B%E5%9E%8B%E5%9C%A8ABAP%E4%B8%AD%E7%9A%84%E8%BF%90%E7%94%A8/index.html">
+<meta property="og:title" content="ABAP&#x2F;ABAP中的动态编程">
+<meta property="og:url" content="http://yoursite.com/2020/02/23/ABAP/ABAP%E4%B8%AD%E7%9A%84%E5%8A%A8%E6%80%81%E7%BC%96%E7%A8%8B/index.html">
 <meta property="og:site_name" content="你的BUG,我写的博客">
-<meta property="og:description" content="一、概念ABAP中的泛型编程用于支持不依赖具体的数据类型的操作，也就是通用的操作。 ABAP中的泛型采用了预定义的通用类型（Generic Type）与字段符号相配合来实现。 SAP通过类的反射机制来演示泛型在类对象中的应用。 类对象的反射机制可以让我们在程序的运行期（Runtime）获得一个类的具体细节，如类的状态、变量名臣和值、方法名称和参数等信息。还可以让我么在运行期实例化对象，通过调用GE">
+<meta property="og:description" content="一、概念 动态编程语言和静态编程语言    静态和动态是针对变量的数据类型。静态类型中不同的数据类型的变量在使用前需要分配内存。检查是编译期间。反之，就是动态类型语言。类型检查是在编译时完成，还是在运行时完成。或者说，运行时，是否有动态类型和动态类型信息是静态语言和动态语言的区别。  运行时类型识别（RTTI）   ​         运行时类型标识（RTTI）可在运行时获取有关数据类型的所有信息">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/2020/02/22/%E6%B3%9B%E5%9E%8B%E5%9C%A8ABAP%E4%B8%AD%E7%9A%84%E8%BF%90%E7%94%A8/CLASS.png">
-<meta property="article:published_time" content="2020-02-22T17:18:34.032Z">
-<meta property="article:modified_time" content="2020-02-22T17:18:34.031Z">
+<meta property="og:image" content="http://yoursite.com/2020/02/23/ABAP/ABAP%E4%B8%AD%E7%9A%84%E5%8A%A8%E6%80%81%E7%BC%96%E7%A8%8B/CLASS.png">
+<meta property="article:published_time" content="2020-02-23T12:19:18.385Z">
+<meta property="article:modified_time" content="2020-02-23T12:19:18.385Z">
 <meta property="article:author" content="你的BUG,我写的">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/02/22/%E6%B3%9B%E5%9E%8B%E5%9C%A8ABAP%E4%B8%AD%E7%9A%84%E8%BF%90%E7%94%A8/CLASS.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/02/23/ABAP/ABAP%E4%B8%AD%E7%9A%84%E5%8A%A8%E6%80%81%E7%BC%96%E7%A8%8B/CLASS.png">
   
     <link rel="alternative" href="/atom.xml" title="你的BUG,我写的博客" type="application/atom+xml">
   
@@ -174,20 +174,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-泛型在ABAP中的运用" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-ABAP/ABAP中的动态编程" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      泛型在ABAP中的运用
+      ABAP/ABAP中的动态编程
     </h1>
   
 
         
-        <a href="/2020/02/22/%E6%B3%9B%E5%9E%8B%E5%9C%A8ABAP%E4%B8%AD%E7%9A%84%E8%BF%90%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2020-02-22T17:18:34.032Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-22</time>
+        <a href="/2020/02/23/ABAP/ABAP%E4%B8%AD%E7%9A%84%E5%8A%A8%E6%80%81%E7%BC%96%E7%A8%8B/" class="archive-article-date">
+  	<time datetime="2020-02-23T12:19:18.385Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-23</time>
 </a>
         
       </header>
@@ -196,12 +196,23 @@
  
 
 	
-		<h1 id="一、概念"><a href="#一、概念" class="headerlink" title="一、概念"></a>一、概念</h1><p>ABAP中的泛型编程用于支持不依赖具体的数据类型的操作，也就是通用的操作。</p>
-<p>ABAP中的泛型采用了预定义的通用类型（Generic Type）与字段符号相配合来实现。</p>
-<p>SAP通过类的反射机制来演示泛型在类对象中的应用。</p>
-<p>类对象的反射机制可以让我们在程序的运行期（Runtime）获得一个类的具体细节，如类的状态、变量名臣和值、方法名称和参数等信息。还可以让我么在运行期实例化对象，通过调用GET/SET方法获取变量的值。</p>
+		<h1 id="一、概念"><a href="#一、概念" class="headerlink" title="一、概念"></a>一、概念</h1><ul>
+<li><p>动态编程语言和静态编程语言</p>
+<p>   静态和动态是针对变量的数据类型。静态类型中不同的数据类型的变量在使用前需要分配内存。检查是编译期间。反之，就是动态类型语言。类型检查是在编译时完成，还是在运行时完成。或者说，运行时，是否有动态类型和动态类型信息是静态语言和动态语言的区别。</p>
+</li>
+<li><p>运行时类型识别（RTTI）</p>
+</li>
+</ul>
+<p>​         运行时类型标识（RTTI）可在运行时获取有关数据类型的所有信息。使用动态编程技术时，常常需要动态确       定数据类型或属性，以便决定如何处理数据，以及后续的操作。</p>
 <a id="more"></a>
-<p>ABAP中预定义的通用类型</p>
+
+<h1 id="二、泛型的运用–基本类型"><a href="#二、泛型的运用–基本类型" class="headerlink" title="二、泛型的运用–基本类型"></a>二、泛型的运用–基本类型</h1><ul>
+<li><p>泛型</p>
+<p>​     泛型本质上就是参数化类型（parameterized type）。在定义类、接口、方法的时候，把将要操作的数据类型声明为形参。在实例化的时候，再传入实际的数据类型，就是由类型实参指定真实数据类型。这就是泛型。</p>
+</li>
+</ul>
+<p>ABAP 采用了预定义的通用类型（Generic Type）与字段符号（FIELD-SYSMBALS）相配合来实现。在编译的时候，系统并不知道操作的具体类型,只有在运行的时候，才能确定，并且在运行中可以得到，类型的所有类型信息。</p>
+<p>简要列下，ABAP中预定义的通用类型</p>
 <table>
 <thead>
 <tr>
@@ -221,17 +232,45 @@
 <td>OBJECT</td>
 <td>任何对象类型</td>
 </tr>
+<tr>
+<td>DATA</td>
+<td>任何数据类型</td>
+</tr>
 </tbody></table>
-<p>ABAP类对象的泛型</p>
 <p>首先说下几个相关的类</p>
-<p><img src="/2020/02/22/%E6%B3%9B%E5%9E%8B%E5%9C%A8ABAP%E4%B8%AD%E7%9A%84%E8%BF%90%E7%94%A8/CLASS.png" alt></p>
-<p>其中超类CL_ABAP_TYOEDESCR包含了4个方法，它的子类都继承了该方法</p>
-<p><strong>DESCRIBE_BY_NAME</strong>: 根据入参的类型名返回对应对象的描述。</p>
-<p><strong>DESCRIBE_BY_DATA</strong>:  根据入参的类型名返回对应对象的类型。</p>
-<p><strong>DESCRIBE_BY_DATA_REF</strong>: </p>
-<p><strong>DESCRIBE_BY_OBJECT_REF</strong>: </p>
-<p>可以调用SAP 标准类CL_ABAP_CLASSDESCR方法获取类的属性和方法，并配合使用泛型来操作类对象反射。</p>
-<h1 id="二、泛型的运用"><a href="#二、泛型的运用" class="headerlink" title="二、泛型的运用"></a>二、泛型的运用</h1><h2 id="1-动态内表做行列转换"><a href="#1-动态内表做行列转换" class="headerlink" title="1.动态内表做行列转换"></a>1.动态内表做行列转换</h2><h2 id="2-在实参形参中用"><a href="#2-在实参形参中用" class="headerlink" title="2.在实参形参中用"></a>2.在实参形参中用</h2><h2 id="3-在多态思维中广泛运用。"><a href="#3-在多态思维中广泛运用。" class="headerlink" title="3.在多态思维中广泛运用。"></a>3.在多态思维中广泛运用。</h2>
+<p><img src="/2020/02/23/ABAP/ABAP%E4%B8%AD%E7%9A%84%E5%8A%A8%E6%80%81%E7%BC%96%E7%A8%8B/CLASS.png" alt></p>
+<p>其中超类CL_ABAP_TYOEDESCR包含了4个方法：DESCRIBE_BY_NAME、DESCRIBE_BY_DATA、DESCRIBE_BY_DATA_REF、DESCRIBE_BY_OBJECT_REF。它的子类都继承了该方法.可以调用SAP 标准类方法获取类的属性和方法，并配合使用泛型来操作类对象反射。</p>
+<p>泛型的应用在可以复用的算法，简化了原本需要通过代码实现的冗余部分，以及实现了那些只有在运行时才能确定类型或者参数类型的需求。</p>
+<ul>
+<li>动态创建数据元素类型</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">DATA: dref TYPE REF TO CL_ABAP_ELEMDESCR,</span><br><span class="line">      dref_type TYPE REF TO DATA.</span><br><span class="line">FIELD-SYMBOLS: &lt;FS&gt; .</span><br><span class="line"></span><br><span class="line"> CONSTANTS: c_str TYPE char10 VALUE &#39;ASDDFSA&#39;.</span><br><span class="line">*1.</span><br><span class="line"> DATA(lv_str1) &#x3D; c_str .</span><br><span class="line">  WRITE:lv_str1.</span><br><span class="line">*2.</span><br><span class="line"> DATA lv_string TYPE string.</span><br><span class="line"> lv_string  &#x3D; c_str.</span><br><span class="line"> WRITE:lv_str1.</span><br><span class="line">*3.</span><br><span class="line"> dref ?&#x3D; cl_abap_elemdescr&#x3D;&gt;get_c(  strlen( c_str ) ).</span><br><span class="line"> CREATE DATA dref_type  TYPE HANDLE dref .</span><br><span class="line"> ASSIGN dref_type-&gt;* TO &lt;fs&gt;.</span><br><span class="line"> &lt;fs&gt; &#x3D;  c_str.</span><br><span class="line"> WRITE:&lt;fs&gt;.</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>动态创建结构类型&amp;&amp; 内表</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"> DATA: dref_str    TYPE REF TO data,</span><br><span class="line">       elem_type   TYPE REF TO cl_abap_elemdescr,</span><br><span class="line">       struct_type TYPE REF TO cl_abap_structdescr,</span><br><span class="line">       itab_type   TYPE REF TO cl_abap_tabledescr,</span><br><span class="line">       dref_tab    TYPE REF TO data,</span><br><span class="line">       table_type  TYPE REF TO cl_abap_tabledescr,</span><br><span class="line">       comp_tab    TYPE cl_abap_structdescr&#x3D;&gt;component_table WITH HEADER LINE.</span><br><span class="line"> FIELD-SYMBOLS: &lt;fs_itab&gt; TYPE ANY TABLE,</span><br><span class="line">                &lt;fs&gt;      TYPE any,</span><br><span class="line">                &lt;fs_2&gt;    TYPE any.</span><br><span class="line">* 定义结构</span><br><span class="line"> TYPES:BEGIN OF ty_strut,</span><br><span class="line">         matnr TYPE matnr,</span><br><span class="line">         meins TYPE meins,</span><br><span class="line">       END OF ty_strut.</span><br><span class="line">DATA:gs_struct TYPE  ty_strut.</span><br><span class="line">*动态创建基本类型</span><br><span class="line"> elem_type ?&#x3D; cl_abap_elemdescr&#x3D;&gt;get_c(  10 ).</span><br><span class="line">*动态创建结构类型</span><br><span class="line"> struct_type ?&#x3D; CL_ABAP_STRUCTDESCR&#x3D;&gt;DESCRIBE_BY_DATA( gs_struct ).</span><br><span class="line"></span><br><span class="line"> struct_type ?&#x3D; cl_abap_typedescr&#x3D;&gt;describe_by_name( &#39;TY_STRUT&#39; ).&quot;结构类型</span><br><span class="line">*获取结构体的组件成内表</span><br><span class="line"> comp_tab[] &#x3D; struct_type-&gt;get_components( ).&quot;组成结构体的各个字段组件</span><br><span class="line">*向结构中动态的新增一个成员</span><br><span class="line"> comp_tab-name &#x3D; &#39;L_COUNT&#39;.&quot;为结构新增一个成员</span><br><span class="line"> comp_tab-type &#x3D; elem_type.&quot;新增成员的类型对象</span><br><span class="line"> INSERT comp_tab INTO comp_tab INDEX 1.</span><br><span class="line">*动态创建新的结构类型对象</span><br><span class="line"> struct_type &#x3D; cl_abap_structdescr&#x3D;&gt;create( comp_tab[] ).</span><br><span class="line"> CREATE DATA dref_str TYPE HANDLE struct_type.&quot;使用结构类型对象来创建结构对象&#39;</span><br><span class="line"> ASSIGN  dref_str-&gt;* TO  &lt;fs&gt;.</span><br><span class="line">* 赋值</span><br><span class="line"> DO.</span><br><span class="line">   ASSIGN COMPONENT sy-index OF STRUCTURE &lt;fs&gt; TO &lt;fs_2&gt;.</span><br><span class="line">   IF sy-subrc NE 0 OR sy-index &gt; 2 .</span><br><span class="line">     EXIT.</span><br><span class="line">   ENDIF.</span><br><span class="line">   &lt;fs_2&gt; &#x3D; 1.</span><br><span class="line"> ENDDO.</span><br><span class="line">*显示</span><br><span class="line"> DO.</span><br><span class="line">   ASSIGN COMPONENT sy-index OF STRUCTURE &lt;fs&gt; TO &lt;fs_2&gt;.</span><br><span class="line">   IF sy-subrc NE 0 OR sy-index &gt; 2 .</span><br><span class="line">     EXIT.</span><br><span class="line">   ENDIF.</span><br><span class="line">   READ TABLE comp_tab INTO DATA(gs_tab) INDEX sy-index.</span><br><span class="line">   IF  sy-subrc &#x3D; 0.</span><br><span class="line">     WRITE:    gs_tab-name,  &lt;fs_2&gt; .</span><br><span class="line">   ENDIF.</span><br><span class="line"> ENDDO.</span><br><span class="line"></span><br><span class="line">*根据结构创建类型</span><br><span class="line"> itab_type &#x3D; cl_abap_tabledescr&#x3D;&gt;create( struct_type ).</span><br><span class="line">*使用内表类型对象来创建内表类型</span><br><span class="line"> CREATE DATA dref_tab TYPE HANDLE itab_type.</span><br><span class="line">*将字段符号指向新创建出来的内表对象</span><br><span class="line"> ASSIGN dref_tab-&gt;* TO &lt;fs_itab&gt;.</span><br><span class="line"></span><br><span class="line">*动态内表加一列</span><br><span class="line"> table_type ?&#x3D; cl_abap_tabledescr&#x3D;&gt;describe_by_data( dref_tab ).</span><br><span class="line"> struct_type ?&#x3D; table_type-&gt;get_table_line_type( ).</span><br><span class="line"> comp_tab[] &#x3D; struct_type-&gt;get_components( ).</span><br><span class="line"> comp_tab-name &#x3D; &#39;FIDESC&#39;.</span><br><span class="line"> comp_tab-type &#x3D; cl_abap_elemdescr&#x3D;&gt;get_c( 120 ).</span><br><span class="line"> INSERT comp_tab INTO comp_tab INDEX 2.</span><br><span class="line"> struct_type &#x3D; cl_abap_structdescr&#x3D;&gt;create( comp_tab[] ).</span><br><span class="line"> itab_type &#x3D; cl_abap_tabledescr&#x3D;&gt;create( struct_type ).</span><br><span class="line"> CREATE DATA dref_tab TYPE HANDLE itab_type.</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="三、泛型的运用–类的反射"><a href="#三、泛型的运用–类的反射" class="headerlink" title="三、泛型的运用–类的反射"></a>三、泛型的运用–类的反射</h1><p>ABAP中通过类反射的机制，使得在运行时，可以得知类的所有属性细节特性，在运行时 实例化该类并且通过GET/SET方式操作类的实例。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">*----------------------------------------------------------------------*</span><br><span class="line">*       CLASS c1 DEFINITION</span><br><span class="line">*----------------------------------------------------------------------*</span><br><span class="line">*</span><br><span class="line">*----------------------------------------------------------------------*</span><br><span class="line">CLASS c1 DEFINITION.</span><br><span class="line">  PUBLIC SECTION.</span><br><span class="line">    DATA:c VALUE &#39;C&#39;.</span><br><span class="line">    METHODS:test.</span><br><span class="line">ENDCLASS.                    &quot;c1 DEFINITION</span><br><span class="line"></span><br><span class="line">*----------------------------------------------------------------------*</span><br><span class="line">*       CLASS c1 IMPLEMENTATION</span><br><span class="line">*----------------------------------------------------------------------*</span><br><span class="line">*</span><br><span class="line">*----------------------------------------------------------------------*</span><br><span class="line">CLASS c1 IMPLEMENTATION.</span><br><span class="line">  METHOD:test.</span><br><span class="line">    WRITE: &#x2F; &#39;Test&#39;.</span><br><span class="line">  ENDMETHOD.</span><br><span class="line">ENDCLASS.                    &quot;c1 IMPLEMENTATION</span><br><span class="line"></span><br><span class="line">START-OF-SELECTION.</span><br><span class="line">  TYPES:ty_tp1.</span><br><span class="line">  DATA:oref TYPE REF TO object.</span><br><span class="line">  DATA:oref_classdescr TYPE REF TO cl_abap_classdescr.</span><br><span class="line">  CREATE OBJECT oref type (&#39;C1&#39;).&quot;根据类名动态创建实例对象</span><br><span class="line">  oref_classdescr ?&#x3D; cl_abap_classdescr&#x3D;&gt;describe_by_object_ref( oref ).</span><br><span class="line">  DATA:t_attrdescr_tab TYPE abap_attrdescr_tab WITH HEADER LINE,&quot;属性列表</span><br><span class="line">        t_methdescr_tab TYPE abap_methdescr_tab WITH HEADER LINE.&quot;方法列表</span><br><span class="line">  FIELD-SYMBOLS &lt;fs_attr&gt; TYPE ANY.</span><br><span class="line">  t_attrdescr_tab[] &#x3D; oref_classdescr-&gt;attributes.</span><br><span class="line">  t_methdescr_tab[] &#x3D; oref_classdescr-&gt;methods.</span><br><span class="line">  LOOP AT t_attrdescr_tab.&quot;动态访问类属性</span><br><span class="line">    ASSIGN oref-&gt;(t_attrdescr_tab-name) TO &lt;fs_attr&gt;.</span><br><span class="line">    WRITE:&#x2F; &lt;fs_attr&gt;.</span><br><span class="line">  ENDLOOP.</span><br><span class="line">  LOOP AT t_methdescr_tab.&quot;动态访问类中的方法</span><br><span class="line">    CALL METHOD oref-&gt;(t_methdescr_tab-name).</span><br><span class="line">  ENDLOOP.</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="四、SQL动态基本语法"><a href="#四、SQL动态基本语法" class="headerlink" title="四、SQL动态基本语法"></a>四、SQL动态基本语法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">* 动态排序</span><br><span class="line">name &#x3D; &#39;MATNR&#39;.</span><br><span class="line">sort itab BY (name)</span><br><span class="line"></span><br><span class="line">* 动态SQL</span><br><span class="line">DATA: L_FIELD(100) TYPE C,</span><br><span class="line">L_TABLE(10) TYPE C,</span><br><span class="line">L_COND(100) TYPE C.</span><br><span class="line">DATA: I_COND TYPE TALBE OF L_COND.</span><br><span class="line">FIELD-SYMBOLS TYPE ANY.</span><br><span class="line">START-OF-Selection.</span><br><span class="line">CONCATENATE‘CARRID’‘CONNID’‘CITYFROM’</span><br><span class="line">INTO L_S SEPARATE BY SPACE.</span><br><span class="line">CONCATENATE‘CONNID &#x3D;‘‘’‘0123’‘’’’INTO L_COND.</span><br><span class="line">APPEND COND TO I_COND.</span><br><span class="line">L_TABLE &#x3D;‘SPFLI’.</span><br><span class="line">IF IS ASSIGNED.</span><br><span class="line">UNASSIGN .</span><br><span class="line">ASSIGN SPFLI TO .</span><br><span class="line">ELSE.</span><br><span class="line">ASSIGN SPFLI TO .</span><br><span class="line">ENDIF.</span><br><span class="line">Select_DATA_TO_WA (L_S) (L_TABLE) I_COND.</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
 	
 
     </div>
@@ -299,7 +338,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/22/%E6%B3%9B%E5%9E%8B%E5%9C%A8ABAP%E4%B8%AD%E7%9A%84%E8%BF%90%E7%94%A8/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/23/ABAP/ABAP%E4%B8%AD%E7%9A%84%E5%8A%A8%E6%80%81%E7%BC%96%E7%A8%8B/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -342,7 +381,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、概念"><span class="toc-number">1.</span> <span class="toc-text">一、概念</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、泛型的运用"><span class="toc-number">2.</span> <span class="toc-text">二、泛型的运用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-动态内表做行列转换"><span class="toc-number">2.1.</span> <span class="toc-text">1.动态内表做行列转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-在实参形参中用"><span class="toc-number">2.2.</span> <span class="toc-text">2.在实参形参中用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-在多态思维中广泛运用。"><span class="toc-number">2.3.</span> <span class="toc-text">3.在多态思维中广泛运用。</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、概念"><span class="toc-number">1.</span> <span class="toc-text">一、概念</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、泛型的运用–基本类型"><span class="toc-number">2.</span> <span class="toc-text">二、泛型的运用–基本类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、泛型的运用–类的反射"><span class="toc-number">3.</span> <span class="toc-text">三、泛型的运用–类的反射</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、SQL动态基本语法"><span class="toc-number">4.</span> <span class="toc-text">四、SQL动态基本语法</span></a></li></ol>
                     </div>
                 </span>
             </div>
