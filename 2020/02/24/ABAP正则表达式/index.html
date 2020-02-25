@@ -6,24 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>阿里云ECS服务器搭建---  二、  通过xshell远程登录阿里ECS云服务 | 你的BUG,我写的博客</title>
+  <title>ABAP正则表达式 | 你的BUG,我写的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="虽然云服务管理平台带远程登录功能，但是， 管理平台的远程登录太麻烦了，而且命令还得COPY，无法直接操作等，最最重要的没几分钟就跳出去，要重新链接，比SAP还恶心，因此需要安装终端模拟Xshell CRT等。不过，基本都大同小异。本文以Xshell为例子。">
+  <meta name="description" content="正则表达式是对字符串操作的一种逻辑公式，其实就是对字符串的一种过滤逻辑，或者验证，或者查找替换，非常的灵活，逻辑性和功能性都非常强，在各种应用中都广泛运用。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="阿里云ECS服务器搭建---  二、  通过xshell远程登录阿里ECS云服务">
-<meta property="og:url" content="http://yoursite.com/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/index.html">
+<meta property="og:title" content="ABAP正则表达式">
+<meta property="og:url" content="http://yoursite.com/2020/02/24/ABAP%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.html">
 <meta property="og:site_name" content="你的BUG,我写的博客">
-<meta property="og:description" content="虽然云服务管理平台带远程登录功能，但是， 管理平台的远程登录太麻烦了，而且命令还得COPY，无法直接操作等，最最重要的没几分钟就跳出去，要重新链接，比SAP还恶心，因此需要安装终端模拟Xshell CRT等。不过，基本都大同小异。本文以Xshell为例子。">
+<meta property="og:description" content="正则表达式是对字符串操作的一种逻辑公式，其实就是对字符串的一种过滤逻辑，或者验证，或者查找替换，非常的灵活，逻辑性和功能性都非常强，在各种应用中都广泛运用。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/clipboard-1582111263970.png">
-<meta property="og:image" content="http://yoursite.com/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/clipboard-1582111263971.png">
-<meta property="og:image" content="http://yoursite.com/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/clipboard-1582111263971.png">
-<meta property="og:image" content="http://yoursite.com/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/clipboard-1582111263971.png">
-<meta property="article:published_time" content="2020-02-19T11:41:33.865Z">
-<meta property="article:modified_time" content="2020-02-19T11:41:33.864Z">
+<meta property="og:image" content="http://yoursite.com/2020/02/24/ABAP%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/lip_image002.png">
+<meta property="article:published_time" content="2020-02-25T03:44:52.506Z">
+<meta property="article:modified_time" content="2020-02-25T02:12:33.246Z">
 <meta property="article:author" content="你的BUG,我写的">
+<meta property="article:tag" content="Regex">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/clipboard-1582111263970.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/02/24/ABAP%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/lip_image002.png">
   
     <link rel="alternative" href="/atom.xml" title="你的BUG,我写的博客" type="application/atom+xml">
   
@@ -177,20 +175,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-阿里云ECS服务器搭建---  二、  通过xshell远程登录阿里ECS云服务" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-ABAP正则表达式" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      阿里云ECS服务器搭建---  二、  通过xshell远程登录阿里ECS云服务
+      ABAP正则表达式
     </h1>
   
 
         
-        <a href="/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/" class="archive-article-date">
-  	<time datetime="2020-02-19T11:41:33.865Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-19</time>
+        <a href="/2020/02/24/ABAP%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2020-02-25T03:44:52.506Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-24</time>
 </a>
         
       </header>
@@ -199,41 +197,185 @@
  
 
 	
-		<p>  虽然云服务管理平台带远程登录功能，但是， 管理平台的远程登录太麻烦了，而且命令还得COPY，无法直接操作等，最最重要的没几分钟就跳出去，要重新链接，比SAP还恶心，因此需要安装终端模拟Xshell CRT等。不过，基本都大同小异。本文以Xshell为例子。</p>
+		<p>  正则表达式是对字符串操作的一种逻辑公式，其实就是对字符串的一种过滤逻辑，或者验证，或者查找替换，非常的灵活，逻辑性和功能性都非常强，在各种应用中都广泛运用。</p>
 <a id="more"></a>
 
-<p>安装源:</p>
-<p>链接：<a href="https://pan.baidu.com/s/1ixRuXsyxeGFS2ERyWRNGew" target="_blank" rel="noopener">https://pan.baidu.com/s/1ixRuXsyxeGFS2ERyWRNGew</a> </p>
-<p>提取码：rmpd 这是免安装绿色版。</p>
-<p>1.确认SSH服务启动。</p>
-<p>登录云服务管理平台</p>
-<p><img src="/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/clipboard-1582111263970.png" alt></p>
-<p>然后选择远程连接 VNC ，第一次进入的时候会让你选择远程连接密码，这个很重要，必须记下来，</p>
-<p>然后确认 系统提示让你输入远程连接密码，把刚才的输入进去。</p>
-<p>首先，确认下SSH是否安装并且激活,尽管大部分新装的系统基本都会有。采用rpm命令</p>
-<p>​    rpm -qa | grep ssh</p>
-<p><img src="/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/clipboard-1582111263971.png" alt></p>
-<p>如果有如上结果 说明已经激活，直接到下一步。否则需要安装，注意，不同的Linux版本的安装命令不一样</p>
-<p>cenOS : yum install openssh-server</p>
-<p>Ubuntu： apt</p>
-<p>安装好的话，需要更改配置文件确认下22端口是否开</p>
-<p>vim /etc/ssh/sshd_config</p>
-<p>Port 22若有注释#号 则去掉。</p>
-<p>修改完需要重启SSH服务（新版本的cenOS 启动命令）</p>
-<p>systemctl start sshd.service</p>
-<p>如果没有报错 则重启成功</p>
-<p>然后  检查一下ssh服务是否开启</p>
-<p>ps -e | grep sshd</p>
-<p>检查22端口是否开启（非必须）</p>
-<p>netstat -an | grep 22</p>
-<p>加入开机自启动（）</p>
-<p>systemctl enable sshd.service</p>
-<p>2.打开xshell链接。</p>
-<p><img src="/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/clipboard-1582111263971.png" alt></p>
-<p>输入主机后</p>
-<p>账号密码登录即可：</p>
-<p><img src="/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/clipboard-1582111263971.png" alt></p>
-<p>看到WELCOME 就是成功了</p>
+<p><strong>一、正则表达式应用</strong></p>
+<p>正则表达式的应用有 三种：</p>
+<ul>
+<li>验证（是否符合规则）</li>
+<li>查找（包含提取）</li>
+<li>替换</li>
+</ul>
+<p><strong>二、正则表达式基础–元字符</strong></p>
+<p><strong>行的起始^ 和结束$</strong></p>
+<ul>
+<li><p>^ 脱字符号 </p>
+<p>   文本的开始</p>
+</li>
+<li><p>$ 美元符号</p>
+</li>
+</ul>
+<p>文本的结束</p>
+<p><strong>字符组</strong></p>
+<p>如果搜索的单词不确定具体，可以使用正则表达式的结构体‘【】’它容许使用者列出在某处期望匹配的字符，通常被称作字符组。</p>
+<p><strong>连字符</strong></p>
+<p>在字符组元字符 ‘-’(连字符)表示一个范围</p>
+<p>除了在字符组的开头</p>
+<p><strong>排除型字符组</strong></p>
+<p>用‘[^……]’取代’[……]’</p>
+<p><strong>点号匹配任意字符的占位符</strong></p>
+<p>用点号匹配任意字符的占位符，但是 注意：在字符组里面的.不一定是元字符，例如 a[2.2],但是开头是a[.-/],表示匹配到.到/</p>
+<p><strong>匹配任意子表达式</strong></p>
+<p>‘|’ 指或元字符 ，依靠它 我们能够把不同的子表达式组合成总的表达式，而这个总的表达式右能匹配任意的子表达式。</p>
+<p>假如 A1和A2是两个表达式，但A1|A2就是能够同时匹配任意其中一个的正则表达式。在这样的组合中，子表达式称为“多选分支”。</p>
+<p>因此,’gr[ea]y’ 可以写成 ‘grey|bray’ 或者’gr(a|e)y’,</p>
+<p>请注意 ‘gr[e|a]y’ 不符合要求 ，这里|只是和A E 一样的普通字符。</p>
+<p><strong>可选项元素</strong></p>
+<p>Color 和colou?r 其中u?代表可选项</p>
+<p><strong>量词</strong></p>
+<p>+ * 的作用与？类似。作用于前面的字符？</p>
+<table>
+<thead>
+<tr>
+<th><strong>?</strong></th>
+<th>匹配表达式0次或者1次，相当于 {0,1}，比如：”a[cd]?”可以匹配 “a”,”ac”,”ad”</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>+</strong></td>
+<td>表达式至少出现1次，相当于 {1,}，比如：”a+b”可以匹配 “ab”,”aab”,”aaab”…</td>
+</tr>
+<tr>
+<td>*****</td>
+<td>表达式不出现或出现任意次，相当于 {0,}，比如：”*b”可以匹配 “b”,”cccb”…</td>
+</tr>
+</tbody></table>
+<p><img src="/2020/02/24/ABAP%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/lip_image002.png" alt="img"></p>
+<p><strong>区间量词</strong></p>
+<table>
+<thead>
+<tr>
+<th>\w</th>
+<th>匹配字母数字及下划线</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\W</td>
+<td>匹配非字母数字及下划线</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>匹配任意空白字符，等价于 [\t\n\r\f].</td>
+</tr>
+<tr>
+<td>\S</td>
+<td>匹配任意非空字符</td>
+</tr>
+<tr>
+<td>\d</td>
+<td>匹配任意数字，等价于 [0-9].</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>匹配任意非数字</td>
+</tr>
+</tbody></table>
+<p><strong>匹配次数中的贪婪与非贪婪</strong></p>
+<p> 贪婪模式：</p>
+<p>在使用修饰匹配次数的特殊符号时，有几种表示方法可以使同一个表达式能够匹配不同的次数，比如：”{m,n}”, “{m,}”, “?”, “*”, “+”，具体匹配的次数随被匹配的字符串而定。这种重复匹配不定次数的表达式在匹配过程中，总是尽可能多的匹配。比如，针对文本 “dxxxdxxxd”，举例如下：</p>
+<table>
+<thead>
+<tr>
+<th><strong>表达式</strong></th>
+<th><strong>匹配结果</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>(d)(\w+)</strong></td>
+<td>“\w+” 将匹配第一个 “d” 之后的所有字符 “xxxdxxxd”</td>
+</tr>
+<tr>
+<td><strong>(d)(\w+)(d)</strong></td>
+<td>“\w+” 将匹配第一个 “d” 和最后一个 “d” 之间的所有字符 “xxxdxxx”。虽然 “\w+” 也能够匹配上最后一个 “d”，但是为了使整个表达式匹配成功，”\w+” 可以 “让出” 它本来能够匹配的最后一个 “d”</td>
+</tr>
+</tbody></table>
+<p>由此可见，”\w+” 在匹配的时候，总是尽可能多的匹配符合它规则的字符。虽然第二个举例中，它没有匹配最后一个 “d”，但那也是为了让整个表达式能够匹配成功。同理，带 “*” 和 “{m,n}” 的表达式都是尽可能地多匹配，带 “?” 的表达式在可匹配可不匹配的时候，也是尽可能的 “要匹配”。这种匹配原则就叫作 “贪婪” 模式 。</p>
+<p>非贪婪模式：（ABAP暂时不支持，但是最好理解吧）</p>
+<p>  在修饰匹配次数的特殊符号后再加上一个 “?” 号，则可以使匹配次数不定的表达式尽可能少的匹配，使可匹配可不匹配的表达式，尽可能的 “不匹配”。这种匹配原则叫作 “非贪婪” 模式，也叫作 “勉强” 模式。如果少匹配就会导致整个表达式匹配失败的时候，与贪婪模式类似，非贪婪模式会最小限度的再匹配一些，以使整个表达式匹配成功。举例如下，针对文本 “dxxxdxxxd” 举例：</p>
+<table>
+<thead>
+<tr>
+<th><strong>表达式</strong></th>
+<th><strong>匹配结果</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>(d)(\w+?)</strong></td>
+<td>“\w+?” 将尽可能少的匹配第一个 “d” 之后的字符，结果是：”\w+?” 只匹配了一个 “x”</td>
+</tr>
+<tr>
+<td><strong>(d)(\w+?)(d)</strong></td>
+<td>为了让整个表达式匹配成功，”\w+?” 不得不匹配 “xxx” 才可以让后边的 “d” 匹配，从而使整个表达式匹配成功。因此，结果是：”\w+?” 匹配 “xxx”</td>
+</tr>
+</tbody></table>
+<p><strong>3、 预搜索</strong></p>
+<p>前面的章节中，我讲到了几个代表抽象意义的特殊符号：”^”，”$”，”\b”。它们都有一个共同点，那就是：它们本身不匹配任何字符，只是对 “字符串的两头” 或者 “字符之间的缝隙” 附加了一个条件。理解到这个概念以后，本节将继续介绍另外一种对 “两头” 或者 “缝隙” 附加条件的，更加灵活的表示方法。</p>
+<p>正向预搜索：”(?=xxxxx)”，”(?!xxxxx)”</p>
+<p>  格式：”(?=xxxxx)”，在被匹配的字符串中，它对所处的 “缝隙” 或者 “两头” 附加的条件是：所在缝隙的右侧，必须能够匹配上 xxxxx 这部分的表达式。因为它只是在此作为这个缝隙上附加的条件，所以它并不影响后边的表达式去真正匹配这个缝隙之后的字符。这就类似 “\b”，本身不匹配任何字符。”\b” 只是将所在缝隙之前、之后的字符取来进行了一下判断，不会影响后边的表达式来真正的匹配。</p>
+<p>举例1：表达式 “Windows (?=NT|XP)” 在匹配 “Windows 98, Windows NT, Windows 2000” 时，将只匹配 “Windows NT” 中的 “Windows “，其他的 “Windows “ 字样则不被匹配。</p>
+<p>  举例2：表达式 “(\w)((?=\1\1\1)(\1))+” 在匹配字符串 “aaa ffffff 999999999” 时，将可以匹配6个”f”的前4个，可以匹配9个”9”的前7个。这个表达式可以读解成：重复4次以上的字母数字，则匹配其剩下最后2位之前的部分。当然，这个表达式可以不这样写，在此的目的是作为演示之用。</p>
+<p>格式：”(?!xxxxx)”，所在缝隙的右侧，必须不能匹配 xxxxx 这部分表达式。</p>
+<p>  举例3：表达式 “((?!\bstop\b).)+” 在匹配 “fdjka ljfdl stop fjdsla fdj” 时，将从头一直匹配到 “stop” 之前的位置，如果字符串中没有 “stop”，则匹配整个字符串。</p>
+<p>  举例4：表达式 “do(?!\w)” 在匹配字符串 “done, do, dog” 时，只能匹配 “do”。在本条举例中，”do” 后边使用 “(?!\w)” 和使用 “\b” 效果是一样的。</p>
+<p><em>来自</em> *&lt;<em><a href="https://www.cnblogs.com/loveplxf/archive/2012/08/31/2666107.html" target="_blank" rel="noopener"><em>https://www.cnblogs.com/loveplxf/archive/2012/08/31/2666107.html</em></a></em>&gt;*</p>
+<table>
+<thead>
+<tr>
+<th><strong>表达式</strong></th>
+<th><strong>方向</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>(?=xxx)</strong></td>
+<td>正向预搜索（向右）</td>
+<td>正向预搜索，判断当前位置右侧是否能匹配指定表达式</td>
+</tr>
+<tr>
+<td><strong>(?!xxx)</strong></td>
+<td>正向预搜索否定，判断当前位置右侧是否不能够匹配指定表达式</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>(?&lt;=xxx)</strong></td>
+<td>反向预搜索（向左）[ABAP不支持]</td>
+<td>反向预搜索，判断当前位置左侧是否能够匹配指定表达式</td>
+</tr>
+<tr>
+<td>**(?</td>
+<td>反向预搜索否定，判断当前位置左侧是否不能够匹配指定表达式</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><em>三</em>  </p>
+<p><strong>四、正则表达式在ABAP中的应用</strong></p>
+<p><strong>一、验证</strong></p>
+<ul>
+<li>验证邮箱格式</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">DATA: matcher TYPE REF TO cl_abap_matcher,</span><br><span class="line">      match   TYPE c LENGTH 1.</span><br><span class="line">matcher &#x3D; cl_abap_matcher&#x3D;&gt;create( pattern     &#x3D; &#39;\w+@\w+(\.\w+)+&#39;</span><br><span class="line">                                text        &#x3D; &#39;hubin0809@126.com&#39; ).       </span><br><span class="line">match &#x3D; matcher-&gt;match( ).</span><br><span class="line">WRITE match</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>复杂的验证</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">*IF CL_ABAP_MATCHER&#x3D;&gt;MATCHES( PATTERN &#x3D; &#39;(\D+11([qw]|[er])|\D12)&#39;</span><br><span class="line">*                             TEXT    &#x3D; &#39;qq11q&#39; )</span><br><span class="line">*   &#x3D; ABAP_TRUE.</span><br><span class="line">*  WRITE &#39;符合条件&#39;.</span><br><span class="line">*ELSE.</span><br><span class="line">*  WRITE &#39;不符合条件&#39;.</span><br><span class="line">*ENDIF.</span><br></pre></td></tr></table></figure>
+
+<p><strong>二、查找</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">DATA:</span><br><span class="line">  MATCHER TYPE REF TO CL_ABAP_MATCHER,</span><br><span class="line">  MATCHES TYPE MATCH_RESULT_TAB,</span><br><span class="line">  MATCH   LIKE LINE OF MATCHES,</span><br><span class="line">  W_TEXT  TYPE STRING.</span><br><span class="line">W_TEXT &#x3D;  &#39;&lt;a id&#x3D;&quot;MyLinks1_NewPostLink&quot;&#39;</span><br><span class="line">&amp; &#39; href&#x3D;&quot;http:&#x2F;&#x2F;www.cnblogs.com&#x2F;VerySky&#x2F;admin&#x2F;EditPosts.aspx?opt&#x3D;1&quot;&gt;&#39;.</span><br><span class="line">MATCHER &#x3D; CL_ABAP_MATCHER&#x3D;&gt;CREATE( PATTERN  &#x3D; &#39;http:&#x2F;&#x2F;.*(?&#x3D;&quot;)&#39;</span><br><span class="line">                                   TEXT     &#x3D; W_TEXT ).</span><br><span class="line">*&amp; 其中 （？&#x3D;&quot;） 表示匹配到右边为&quot;,而且为贪婪模式查找..*表示很多很多字符</span><br><span class="line">                             </span><br><span class="line">MATCHES &#x3D; MATCHER-&gt;FIND_ALL( ).</span><br><span class="line">LOOP AT MATCHES INTO MATCH.</span><br><span class="line">  WRITE:&#x2F; W_TEXT+MATCH-OFFSET(MATCH-LENGTH).</span><br><span class="line">ENDLOOP.</span><br><span class="line">结果：http:&#x2F;&#x2F;www.cnblogs.com&#x2F;VerySky&#x2F;admin&#x2F;EditPosts.aspx?opt&#x3D;1</span><br><span class="line">DATA: STR TYPE STRING ,</span><br><span class="line">      RESULT_TAB TYPE MATCH_RESULT_TAB ,</span><br><span class="line">      WA LIKE LINE OF RESULT_TAB.</span><br><span class="line">      </span><br><span class="line">*找出STRING里面的双字节字符</span><br><span class="line">str &#x3D; &#39;abc我啊adfsf们&#39;.</span><br><span class="line">FIND ALL OCCURRENCES OF REGEX &#39;[^\x00-\xff]*&#39; IN STR RESULTS RESULT_TAB.</span><br><span class="line">LOOP AT RESULT_TAB INTO WA.</span><br><span class="line">  WRITE &#x2F; STR+WA-OFFSET(WA-LENGTH).</span><br><span class="line">ENDLOOP.</span><br></pre></td></tr></table></figure>
+
 
 	
 
@@ -241,7 +383,29 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Regex</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Regex//" class="article-tag-list-link color1">Regex</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -291,7 +455,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/24/ABAP%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -305,15 +469,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/02/22/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          阿里云ECS服务器搭建--三、FTP服务器搭建-vsftp部署（1）
-        
-      </div>
-    </a>
   
+    <a href="/2020/02/23/SAP/ABAP%E4%B8%AD%E7%9A%84%E5%8A%A8%E6%80%81%E7%BC%96%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SAP/ABAP中的动态编程</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

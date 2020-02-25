@@ -6,24 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>阿里云ECS服务器搭建---  二、  通过xshell远程登录阿里ECS云服务 | 你的BUG,我写的博客</title>
+  <title>Category: Regex | 你的BUG,我写的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="虽然云服务管理平台带远程登录功能，但是， 管理平台的远程登录太麻烦了，而且命令还得COPY，无法直接操作等，最最重要的没几分钟就跳出去，要重新链接，比SAP还恶心，因此需要安装终端模拟Xshell CRT等。不过，基本都大同小异。本文以Xshell为例子。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="阿里云ECS服务器搭建---  二、  通过xshell远程登录阿里ECS云服务">
-<meta property="og:url" content="http://yoursite.com/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="你的BUG,我写的博客">
+<meta property="og:url" content="http://yoursite.com/categories/Regex/index.html">
 <meta property="og:site_name" content="你的BUG,我写的博客">
-<meta property="og:description" content="虽然云服务管理平台带远程登录功能，但是， 管理平台的远程登录太麻烦了，而且命令还得COPY，无法直接操作等，最最重要的没几分钟就跳出去，要重新链接，比SAP还恶心，因此需要安装终端模拟Xshell CRT等。不过，基本都大同小异。本文以Xshell为例子。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/clipboard-1582111263970.png">
-<meta property="og:image" content="http://yoursite.com/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/clipboard-1582111263971.png">
-<meta property="og:image" content="http://yoursite.com/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/clipboard-1582111263971.png">
-<meta property="og:image" content="http://yoursite.com/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/clipboard-1582111263971.png">
-<meta property="article:published_time" content="2020-02-19T11:41:33.865Z">
-<meta property="article:modified_time" content="2020-02-19T11:41:33.864Z">
 <meta property="article:author" content="你的BUG,我写的">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/clipboard-1582111263970.png">
   
     <link rel="alternative" href="/atom.xml" title="你的BUG,我写的博客" type="application/atom+xml">
   
@@ -177,223 +168,71 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-阿里云ECS服务器搭建---  二、  通过xshell远程登录阿里ECS云服务" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      阿里云ECS服务器搭建---  二、  通过xshell远程登录阿里ECS云服务
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/02/24/ABAP%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2020-02-25T03:44:52.506Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-24</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/02/24/ABAP%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">ABAP正则表达式</a>
     </h1>
   
 
-        
-        <a href="/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/" class="archive-article-date">
-  	<time datetime="2020-02-19T11:41:33.865Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
- 
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Regex</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-	
-		<p>  虽然云服务管理平台带远程登录功能，但是， 管理平台的远程登录太麻烦了，而且命令还得COPY，无法直接操作等，最最重要的没几分钟就跳出去，要重新链接，比SAP还恶心，因此需要安装终端模拟Xshell CRT等。不过，基本都大同小异。本文以Xshell为例子。</p>
-<a id="more"></a>
+          
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Regex//" class="article-tag-list-link color1">Regex</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-<p>安装源:</p>
-<p>链接：<a href="https://pan.baidu.com/s/1ixRuXsyxeGFS2ERyWRNGew" target="_blank" rel="noopener">https://pan.baidu.com/s/1ixRuXsyxeGFS2ERyWRNGew</a> </p>
-<p>提取码：rmpd 这是免安装绿色版。</p>
-<p>1.确认SSH服务启动。</p>
-<p>登录云服务管理平台</p>
-<p><img src="/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/clipboard-1582111263970.png" alt></p>
-<p>然后选择远程连接 VNC ，第一次进入的时候会让你选择远程连接密码，这个很重要，必须记下来，</p>
-<p>然后确认 系统提示让你输入远程连接密码，把刚才的输入进去。</p>
-<p>首先，确认下SSH是否安装并且激活,尽管大部分新装的系统基本都会有。采用rpm命令</p>
-<p>​    rpm -qa | grep ssh</p>
-<p><img src="/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/clipboard-1582111263971.png" alt></p>
-<p>如果有如上结果 说明已经激活，直接到下一步。否则需要安装，注意，不同的Linux版本的安装命令不一样</p>
-<p>cenOS : yum install openssh-server</p>
-<p>Ubuntu： apt</p>
-<p>安装好的话，需要更改配置文件确认下22端口是否开</p>
-<p>vim /etc/ssh/sshd_config</p>
-<p>Port 22若有注释#号 则去掉。</p>
-<p>修改完需要重启SSH服务（新版本的cenOS 启动命令）</p>
-<p>systemctl start sshd.service</p>
-<p>如果没有报错 则重启成功</p>
-<p>然后  检查一下ssh服务是否开启</p>
-<p>ps -e | grep sshd</p>
-<p>检查22端口是否开启（非必须）</p>
-<p>netstat -an | grep 22</p>
-<p>加入开机自启动（）</p>
-<p>systemctl enable sshd.service</p>
-<p>2.打开xshell链接。</p>
-<p><img src="/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/clipboard-1582111263971.png" alt></p>
-<p>输入主机后</p>
-<p>账号密码登录即可：</p>
-<p><img src="/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/clipboard-1582111263971.png" alt></p>
-<p>看到WELCOME 就是成功了</p>
 
-	
-
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/19/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA---%20%20%E4%BA%8C%E3%80%81%20%20%E9%80%9A%E8%BF%87xshell%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8CECS%E4%BA%91%E6%9C%8D%E5%8A%A1/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/02/22/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA--%E4%B8%89%E3%80%81FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-vsftp%E9%83%A8%E7%BD%B2%EF%BC%881%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          阿里云ECS服务器搭建--三、FTP服务器搭建-vsftp部署（1）
-        
-      </div>
-    </a>
   
   
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    目录，不存在的…
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
-
-
-
-        
-            
-   <section id="comments" class="comments">
-              <style>
-                .comments{margin:30px;padding:10px;background:#fff}
-                @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
-              </style>
-              <div class="valine_comment"></div>
-<!--载入js，在</body>之前插入即可-->
-<!--Leancloud 操作库:-->
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<!--Valine 的核心代码库-->
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<script>
-  var notify = 'true' == true ? true : false;
-  var verify = 'false' == true ? true : false;
-  new Valine({
-      // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
-      av: AV,
-      el: '.valine_comment',
-      emoticon_url: 'https://cloud.panjunwen.com/alu',
-      emoticon_list: ["狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","暗地观察.png"],
-      app_id: 'Py8SMQaqQ9rgkFbTeuaEimiI-gzGzoHsz',
-      app_key: 'JVQnlhwYrhtN3V9WCQTP3IEF',
-      placeholder: '有话要说？'
-    });
-</script>
-
-
-          </section>
-        
-
-        
+    
 
 
           </div>
@@ -418,10 +257,10 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
-		isCategory: false,
+		isCategory: true,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
